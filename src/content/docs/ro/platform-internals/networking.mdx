@@ -1,0 +1,9 @@
+---
+title: Arhitectura de Networking
+---
+
+YAMP utilizează o arhitectură modernă client-server pentru networking, departajându-se semnificativ de modelul peer-to-peer folosit de GTA Online și FiveM. Toată logica și starea jocului sunt gestionate autoritar de către server.
+
+Sincronizarea se realizează prin replicarea eficientă a stării, asigurând că clienții primesc actualizări rapide despre entitățile și evenimentele relevante. Prioritizăm actualizările cu latență scăzută pentru acțiuni critice, optimizând în același timp lățimea de bandă pentru modificările de stare mai puțin importante.
+
+Dezvoltatorii interacționează cu stratul de networking printr-un API clar, simplificând procesul de creare a funcționalităților de gameplay în rețea fără a necesita cunoștințe aprofundate despre protocoalele de bază.

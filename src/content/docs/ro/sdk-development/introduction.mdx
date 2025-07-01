@@ -1,0 +1,23 @@
+---
+title: Introducere în C SDK
+---
+
+YAMP oferă un Software Development Kit (SDK) C de bază pentru utilizatori avansați și contributori ai platformei.
+
+## Scop  
+C SDK expune API-urile fundamentale, la nivel jos, ale platformei YAMP. Scopurile sale principale sunt:  
+1.  **Crearea de Runtime-uri Personalizate:** Permite dezvoltatorilor să construiască suport pentru limbaje de scripting dincolo de cele oficial suportate, Lua și TypeScript (de ex., Python, Rust, Go etc.).  
+2.  **Dezvoltarea Extensiilor Platformei:** Construirea de module native sau pluginuri care se integrează profund cu nucleul YAMP, oferind potențial funcționalități noi sau optimizări de performanță imposibil de realizat doar prin scripting.  
+
+## Public  
+Această secțiune este destinată dezvoltatorilor familiarizați cu dezvoltarea în C/C++ și programarea sistemelor low-level. Nu este **necesară** pentru dezvoltarea obișnuită a serverului folosind runtime-urile standard Lua sau TypeScript.  
+
+## Capabilități  
+Folosind C SDK, poți interacționa direct cu:  
+*   Bucla principală de evenimente  
+*   Funcții de management al entităților  
+*   Invocarea funcțiilor native  
+*   Internals de networking (într-o anumită măsură)  
+*   Hook-uri pentru managementul resurselor  
+
+Consultați ghidurile următoare pentru detalii despre construirea runtime-urilor și extensiilor. ([Building Custom Runtimes](./building-custom-runtimes.md), [Platform Extension Guides](./platform-extension-guides.md))  

@@ -1,0 +1,54 @@
+---
+title: Bine ați venit la YAMP!
+description: Începeți să construiți site-ul de documentație cu Starlight.
+template: splash
+hero:
+  tagline: Clientul competitiv multiplayer GTA V — scalabil, rapid și construit pentru performanță.
+  image:
+    file: ../../../assets/LogoWithText.svg
+  actions:
+    - text: Începeți
+      link: /ro/getting-started/
+      icon: right-arrow
+    - text: Alăturați-vă Discord-ului nostru
+      link: https://discord.gg/yamp
+      icon: external
+      variant: minimal
+---
+
+import {Card, CardGrid, LinkButton} from '@astrojs/starlight/components';
+
+## Călătorie rapidă
+
+<CardGrid stagger>
+	<Card title="Începeți" icon="pencil">
+        <p>
+            Prezintă câteva noțiuni de bază pentru a cunoaște platforma
+        </p>
+        <LinkButton href="/ro/getting-started/">Vezi</LinkButton>
+	</Card>
+	<Card title="Ghiduri pentru dezvoltatori" icon="add-document">
+        <p>
+            Fiind dezvoltator, poate chiar venind de pe o altă platformă, găsindu-ți drumul în YAMP.
+        </p>
+        <LinkButton href="/ro/developer-guides/">Vezi</LinkButton>
+	</Card>
+	<Card title="Date de referință GTA:V" icon="setting">
+		    <p>
+            Date/ Informații care te pot ajuta în dezvoltare
+        </p>
+        <LinkButton href="/ro/gta-v-reference-data/">Vezi</LinkButton>
+	</Card>
+	<Card title="Internals Platformă" icon="open-book">
+        <p>
+            lorem
+        </p>
+        <LinkButton href="/ro/platform-internals/">Vezi</LinkButton>
+	</Card>
+    <Card title="Dezvoltare SDK" icon="open-book">
+        <p>
+            lorem
+        </p>
+        <LinkButton href="/ro/sdk-development/">Vezi</LinkButton>
+    </Card>
+</CardGrid>

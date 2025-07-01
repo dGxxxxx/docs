@@ -1,0 +1,24 @@
+---
+title: Sistemul de Evenimente
+---
+
+YAMP utilizează un sistem de evenimente pentru comunicare și reacționare la evenimente din joc. Acest sistem facilitează comunicarea:  
+*   Între diferite resurse de pe server.  
+*   Între server și clienți.  
+*   Între diferite resurse de pe client.  
+
+## Scop  
+Evenimentele ajută la decuplarea logicii jocului și la crearea de sisteme reactive. În loc ca un script să apeleze direct funcții din altul, poate declanșa un eveniment, iar orice script interesat se poate abona (asculta) la acel eveniment și reacționa corespunzător.  
+
+## Tipuri de Evenimente  
+*   **Evenimente Încorporate:** Platforma emite evenimente pentru evenimente comune precum conectarea/deconectarea jucătorilor, crearea/distrugerea entităților, evenimente de daune, intrarea/ieșirea entităților din raza de streaming etc.  
+*   **Evenimente Personalizate:** Dezvoltatorii pot defini și declanșa propriile evenimente personalizate pentru a semnaliza momente specifice ale logicii jocului sau pentru a comunica între resursele lor.  
+*   **Evenimente Client \<-> Server:** Evenimentele pot fi declanșate pe server pentru a fi primite de clienți specifici (sau toți clienții), iar clienții pot declanșa evenimente destinate serverului (care trebuie întotdeauna validate pe server pentru securitate).  
+
+## Utilizare  
+Dezvoltatorii folosesc funcții API pentru:  
+*   **Abonare (On):** Înregistrarea unei funcții handler care va fi apelată când are loc un anumit eveniment.  
+*   **Declanșare (Emit):** Lansarea unui eveniment, opțional cu transmiterea unor date.  
+*   **Dezabonare (Off):** Eliminarea unei funcții handler înregistrate anterior.  
+
+Consultați [Ghidul de gestionare a evenimentelor](../../developer-guides/event-handling.md) și Referința API pentru numele specifice de evenimente și detalii de utilizare.

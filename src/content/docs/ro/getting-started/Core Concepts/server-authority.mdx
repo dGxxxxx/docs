@@ -1,0 +1,25 @@
+---
+title: Autoritatea Serverului Explicată
+---
+
+YAMP funcționează cu autoritate pe partea de server, ceea ce înseamnă că serverul este singura sursă de adevăr pentru starea jocului și acțiuni. Spre deosebire de sistemele peer-to-peer (precum GTA Online sau FiveM), care se bazează puternic pe netcode-ul GTA, YAMP nu o face.
+
+## Cum Funcționează  
+Acțiunile clientului sunt tratate ca cereri sau inputuri. Serverul primește aceste inputuri, le validează în raport cu regulile și starea jocului, execută acțiunile valide și apoi replică modificările rezultate către clienții relevanți.
+
+## Beneficii  
+Această abordare previne fundamental multe cheat-uri comune în sistemele P2P, cum ar fi:  
+*   Clienții care preiau ilegal controlul entităților (de ex., vehiculele deținute de alții).  
+*   Clienții care manipulează propria stare (de ex., mod god, teleportare).  
+*   Exploatările inerente netcode-ului jocului de bază.  
+
+:::info[Exemplu: Controlul Vehiculului]  
+În sistemele peer-to-peer, un client poate „solicita” proprietatea rețelei asupra unui vehicul. Dacă i se acordă (uneori ilegal), poate manipula datele de sincronizare, putând să-l distrugă chiar dacă alt jucător conduce. În YAMP, serverul păstrează întotdeauna autoritatea; un client poate doar *solicita* să intre sau să controleze un vehicul, iar serverul verifică și execută această acțiune.  
+:::  
+
+## Impact pentru Dezvoltatori  
+*   **Securitate:** Construiești pe o bază rezistentă la multe exploatări comune.  
+*   **Logică:** Scrii în principal logică server-side pentru gestionarea acțiunilor și modificărilor de stare. Codul client-side se concentrează pe prezentare, input și solicitarea acțiunilor.  
+*   **Latență:** Deși autoritatea serverului garantează corectitudinea, acțiunile care depind de validarea serverului pot părea puțin mai puțin imediate decât în sistemele P2P, în funcție de latența jucătorului. Stratul de rețea YAMP este proiectat să minimizeze acest impact pentru acțiuni critice.  
+
+Compromisul pentru o securitate și stabilitate sporită este o dependență mai mare de performanța serverului și calitatea rețelei comparativ cu P2P, dar aceasta este esențială pentru crearea unui mediu competitiv corect.

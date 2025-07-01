@@ -26,52 +26,76 @@ export default defineConfig({
 				de: {
 					label: 'Deutsch',
 					lang: 'de',
+				},
+				// Romanian docs in `src/content/docs/ro/`
+				ro: {
+					label: 'Română',
+					lang: 'ro',
 				}
 			},
 			sidebar: [
-				{
-					label: 'Appendix',
-					collapsed: false,
-					autogenerate: {
-						directory: "appendix",
-					}
+			{
+				label: 'Appendix',
+				collapsed: false,
+				autogenerate: {
+					directory: "appendix",
 				},
-				{
-					label: 'Getting Started',
-					collapsed: false,
-					autogenerate: {
-						directory: "getting-started",
-					}
+				translations: {
+					ro: 'Anexă',
 				},
-				{
-					label: 'Developer Guides',
-					collapsed: true,
-					autogenerate: {
-						directory: "developer-guides",
-					}
+			},
+			{
+				label: 'Getting Started',
+				collapsed: false,
+				autogenerate: {
+					directory: "getting-started",
 				},
-				{
-					label: 'GTA:V Reference Data',
-					collapsed: true,
-					autogenerate: {
-						directory: "gta-v-reference-data",
-					}
+				translations: {
+					ro: 'Introducere',
 				},
-				{
-					label: 'Platform Internals',
-					collapsed: true,
-					autogenerate: {
-						directory: "platform-internals",
-					}
+			},
+			{
+				label: 'Developer Guides',
+				collapsed: true,
+				autogenerate: {
+					directory: "developer-guides",
 				},
-				{
-					label: 'SDK Development',
-					collapsed: true,
-					autogenerate: {
-						directory: "sdk-development",
-					}
+				translations: {
+					ro: 'Ghiduri pentru Dezvoltatori',
 				},
+			},
+			{
+				label: 'GTA:V Reference Data',
+				collapsed: true,
+				autogenerate: {
+					directory: "gta-v-reference-data",
+				},
+				translations: {
+					ro: 'Date Referință GTA:V',
+				},
+			},
+			{
+				label: 'Platform Internals',
+				collapsed: true,
+				autogenerate: {
+					directory: "platform-internals",
+				},
+				translations: {
+					ro: 'Internals Platformă',
+				},
+			},
+			{
+				label: 'SDK Development',
+				collapsed: true,
+				autogenerate: {
+					directory: "sdk-development",
+				},
+				translations: {
+					ro: 'Dezvoltare SDK',
+				},
+			},
 			],
+
 			plugins: [
 				starlightHeadingBadges(),
 				starlightVersions({

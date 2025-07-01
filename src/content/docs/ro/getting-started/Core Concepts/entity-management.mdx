@@ -1,0 +1,24 @@
+---
+title: Managementul Entităților
+---
+
+În YAMP, serverul gestionează centralizat toate entitățile dinamice din lumea jocului. Acestea includ:  
+*   Jucători  
+*   Vehicule  
+*   Pietoni (Peds)  
+*   Obiecte  
+
+## Controlul Serverului  
+Crearea, ștergerea și modificările de stare (cum ar fi poziția, rotația, sănătatea, modelul, metadata) sunt controlate autoritar de către server. Scripturile client nu pot crea direct sau modifica global entitățile de rețea.  
+
+## Streaming  
+Clienții primesc actualizări transmise doar pentru entitățile din raza lor de relevanță (denumită adesea „distanța de streaming”). Aceasta optimizează performanța și lățimea de bandă, asigurând că clienții cunosc doar entitățile apropiate. Serverul gestionează logica de determinare a entităților relevante pentru fiecare client.  
+
+## API pentru Dezvoltatori  
+YAMP oferă API-uri (disponibile în Lua, TypeScript) pentru scripturile server-side pentru a:  
+*   Crea și distruge entități.  
+*   Obține și seta proprietăți ale entităților (poziție, model, sănătate etc.).  
+*   Interoga starea entităților.  
+*   Atașa logică personalizată și date (metadata) entităților.  
+
+Scripturile client-side pot interacționa cu entitățile transmise către ele (de ex., citirea proprietăților, realizarea de efecte locale) dar nu pot modifica starea autoritară a acestora.
